@@ -1,0 +1,2 @@
+class Testimony < ApplicationRecord
+end
