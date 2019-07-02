@@ -27,10 +27,10 @@ ActiveAdmin.register Portofolio do
   	f.semantic_errors
     f.inputs "New Building", :multipart => true do
 
-    	f.input :building_photo, :as => :file, :hint => f.building.building_photo.present? \
+    	f.input :building_photo, :as => :file, :hint => f.portofolio.building_photo.present? \
           ? image_tag(f.object.building_photo.url(:thumbnail))
           : content_tag(:span, "no cover page yet")
-      f.input :photo_cache, :as => :hidden
+      #f.input :photo_cache, :as => :hidden
 	    f.input :building_name
 	    f.input :building_description, :input_html => {:rows => 5, :cols => 20 }
 	  end

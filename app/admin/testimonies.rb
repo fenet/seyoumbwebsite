@@ -27,10 +27,10 @@ ActiveAdmin.register Testimony do
    	f.semantic_errors
      f.inputs "New Testimony", :multipart => true do
 
-     	f.input :client_photo, :as => :file, :hint => f.client.client_photo.present? \
+     	f.input :client_photo, :as => :file, :hint => f.testimony.client_photo.present? \
            ? image_tag(f.object.client_photo.url(:thumbnail))
            : content_tag(:span, "no cover page yet")
-       f.input :photo_cache, :as => :hidden
+      #f.input :photo_cache, :as => :hidden
  	    f.input :client_name
  	    f.input :client_testimony, :input_html => {:rows => 5, :cols => 20 }
  	  end
