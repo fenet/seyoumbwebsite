@@ -10,9 +10,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
+=======
+ActiveRecord::Schema.define(version: 2019_07_01_124431) do
+>>>>>>> 34d061960f6b706a79c4b88bde10baa064b1c0c9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.string "author_type"
+    t.bigint "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "portofolios", force: :cascade do |t|
+    t.string "building_name", null: false
+    t.string "building_photo", null: false
+    t.string "building_description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_portofolios_on_admin_user_id"
+  end
+
+  create_table "testimonies", force: :cascade do |t|
+    t.string "client_name", null: false
+    t.string "client_photo"
+    t.string "client_testimony", null: false
+    t.string "client_phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_testimonies_on_admin_user_id"
+  end
+
+  add_foreign_key "portofolios", "admin_users"
+  add_foreign_key "testimonies", "admin_users"
+>>>>>>> 34d061960f6b706a79c4b88bde10baa064b1c0c9
 end
