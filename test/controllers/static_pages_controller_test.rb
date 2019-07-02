@@ -11,6 +11,11 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get our_services" do
+    get static_pages_our_services_url
+    assert_response :success
+  end
+
   test "should get home" do
     get static_pages_home_url
     assert_response :success
