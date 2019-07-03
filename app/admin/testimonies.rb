@@ -1,15 +1,13 @@
 ActiveAdmin.register Testimony do
 
-  menu label: "Testimony"
+
   permit_params :client_name, :client_photo, :photo_cache, :client_testimony, :client_phone_number
 
   index do
     selectable_column
-    column :id
+
     column "Client Photo" do |i|
-
-        image_tag(i.client_photo.url(:small_thumbnail)) if i.client_photo.present?
-
+      image_tag(i.client_photo.url(:small_thumbnail)) if i.client_photo.present?
     end
     column "Client Name", sortable: true
     column "Client Testimony"
@@ -20,12 +18,13 @@ ActiveAdmin.register Testimony do
     actions
   end
 
+   
+
    filter :client_name
-   filter :id
 
    form do |f|
    	f.semantic_errors
-     f.inputs "New Testimony", :multipart => true do
+     f.inputs "Create New Testimony", :multipart => true do
 
      	f.input :client_photo, :as => :file, :hint => f.testimony.client_photo.present? \
            ? image_tag(f.object.client_photo.url(:thumbnail))

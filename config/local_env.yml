@@ -6,9 +6,8 @@ DB_PORT: '5432'
 
 TEST_DATABASE: 'seyoumb'
 
-#HISAB_DATABASE_PASSWORD: '000000'
 
-#ADMIN_FULLNAME: 'hisabyebet'
+
+
 #ADMIN_EMAIL: 'hisabyebet@gmail.com'
 #SEED_PASSWORD: 'hisab1234'
-#ROLE: 'Owner'

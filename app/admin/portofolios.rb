@@ -1,15 +1,13 @@
 ActiveAdmin.register Portofolio do
 
- menu label: "Portofolio"
- permit_params :building_name, :building_photo, :building_photo, :photo_cache
+
+ permit_params :building_name, :building_photo, :building_description, :photo_cache
 
  index do
    selectable_column
-   column :id
+
    column "Building Photo" do |i|
-
-       image_tag(i.building_photo.url(:small_thumbnail)) if i.building_photo.present?
-
+     image_tag(i.building_photo.url(:small_thumbnail)) if i.building_photo.present?
    end
    column "Building Name", sortable: true
    column "Building Description"
@@ -20,12 +18,14 @@ ActiveAdmin.register Portofolio do
    actions
  end
 
+
+
   filter :building_name
-  filter :id
+
 
   form do |f|
   	f.semantic_errors
-    f.inputs "New Building", :multipart => true do
+    f.inputs "New Building" do
 
     	f.input :building_photo, :as => :file, :hint => f.portofolio.building_photo.present? \
           ? image_tag(f.object.building_photo.url(:thumbnail))
@@ -36,6 +36,7 @@ ActiveAdmin.register Portofolio do
 	  end
     f.actions
   end
+
 
   show title: :building_name do
     panel "Building" do

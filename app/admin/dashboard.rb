@@ -16,7 +16,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Testimony posts" do
           table_for Testimony.order("id desc").limit(10).each do
-            column("Client Name")    { |testimony| link_to(portofolio.client_name, admin_testimony_path(testimony)) }
+            column("Client Name")    { |testimony| link_to(testimony.client_name, admin_testimony_path(testimony)) }
             column("Created At" )   { |testimony| testimony.created_at.strftime("%b %d, %Y") }
           end
         end
