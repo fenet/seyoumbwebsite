@@ -1,2 +1,8 @@
-<h1>Portofolios#show</h1>
-<p>Find me in app/views/portofolios/show.html.erb</p>
+<div>
+     <li >
+       <%= image_tag(@portofolio.building_photo.url(:small_thumbnail), alt: "#{@portofolio.building_name}") if !@portofolio.building_photo.nil? %>
+
+		    <h3 ><%= @portofolio.building_name%></h3>
+         <h3 ><%= @portofolio.building_description%></h3>
+		  </li>
+</div>

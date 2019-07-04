@@ -1,2 +1,11 @@
-<h1>Portofolios#index</h1>
-<p>Find me in app/views/portofolios/index.html.erb</p>
+<%= @portofolios.each do |v|%>
+
+    <div>
+
+    <%= image_tag(v.building_photo.url(:small_thumbnail), alt: "#{v.building_name}") if !v.building_photo.nil? %>
+    <h4><%= v.building_name%></h4>
+    <h4><%= v.building_description%></h4>
+
+    </div>
+
+<% end %>
