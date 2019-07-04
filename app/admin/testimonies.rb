@@ -4,7 +4,6 @@ ActiveAdmin.register Testimony do
   permit_params :client_name, :client_photo, :photo_cache, :client_testimony, :client_phone_number
 
   index do
-    selectable_column
 
     column "Client Photo" do |i|
       image_tag(i.client_photo.url(:small_thumbnail)) if i.client_photo.present?
@@ -18,7 +17,6 @@ ActiveAdmin.register Testimony do
     actions
   end
 
-   
 
    filter :client_name
 

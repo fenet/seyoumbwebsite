@@ -35,15 +35,19 @@ class BuildingPhotoUploader < CarrierWave::Uploader::Base
   #   process resize_to_fit: [50, 50]
   # end
   version :standard do
-    process :resize_to_fill => [884, 348]
+    process :resize_to_fill => [372, 431]
   end
 
+  version :large_thumbnail do
+    resize_to_fit(781, 300)
+  end
   version :thumbnail do
-    resize_to_fit(50, 50)
+    resize_to_fit(153, 231)
   end
-  version :banner  do
-    resize_to_fit(1440, 900)
+  version :small_thumbnail do
+    resize_to_fit(120, 120)
   end
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

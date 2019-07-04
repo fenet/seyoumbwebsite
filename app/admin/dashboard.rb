@@ -2,6 +2,7 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
   content title: proc { I18n.t("active_admin.dashboard") } do
+
     columns do
       column do
         panel "Recent Portofolio posts" do
@@ -11,18 +12,16 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
       end
-    end
-    columns do
+
       column do
         panel "Recent Testimony posts" do
           table_for Testimony.order("id desc").limit(10).each do
             column("Client Name")    { |testimony| link_to(testimony.client_name, admin_testimony_path(testimony)) }
             column("Created At" )   { |testimony| testimony.created_at.strftime("%b %d, %Y") }
-          end
+
         end
       end
     end
     end
-
-
-  end # content
+  end
+end

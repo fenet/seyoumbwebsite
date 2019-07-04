@@ -4,7 +4,6 @@ ActiveAdmin.register Portofolio do
  permit_params :building_name, :building_photo, :building_description, :photo_cache
 
  index do
-   selectable_column
 
    column "Building Photo" do |i|
      image_tag(i.building_photo.url(:small_thumbnail)) if i.building_photo.present?
