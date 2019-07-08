@@ -5,9 +5,15 @@ ActiveAdmin.register Contact do
  
  index do
 
-   column "User Name", sortable: true
-   column "Email"
-   column "Message"
+   column "User Name" do |i|
+      i.user_name
+   end
+   column "Email" do |i|
+      i.email
+   end
+   column "Message" do |i|
+      i.message
+   end
 
    column "Created At", sortable: true do |c|
      c.created_at.strftime("%b %d, %Y")
@@ -19,7 +25,7 @@ ActiveAdmin.register Contact do
 
   show do
     panel "Contact Comments" do
-      attributes_table_for portofolio do
+      attributes_table_for contact do
 
 
         row :user_name
