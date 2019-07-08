@@ -1,13 +1,11 @@
 
 	<!-- Page header section start -->
-	<section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
+	<section class="page-header-section set-bg">
 		<div class="container">
 			<h1 class="header-title">About us<span>.</span></h1>
 		</div>
 	</section>
 	<!-- Page header section end -->
-
-
 
 	<!-- Intro section start -->
 	<section class="intro-section spad">
@@ -72,15 +70,16 @@
 	<!-- Team section end -->
 
 
-	<section class="promo-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 promo-text">
-					<h1>In need of a <span style="color: white;">Consultant</span> for your building or home?</h1>
-					<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus.</p>
+<section class="promo-section pt-0">
+		<div class="promo-box set-bg" data-setbg="img/bg.jpg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 promo-text">
+						<h1>In need of a <span style="color: white;">Consultant</span> for your building or home?</h1>
+					</div>
+					<div class="col-lg-3 text-lg-right">
+					<%= link_to("Get in Touch", static_pages_about_us_path,  class: "site-btn sb-light mt-4" )%>
 				</div>
-				<div class="col-lg-3 text-lg-right">
-					<%= link_to("Get in Touch", static_pages_about_us_path,  class: "site-btn sb-dark mt-4" )%>
 				</div>
 			</div>
 		</div>

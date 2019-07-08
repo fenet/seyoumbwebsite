@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/contact_us'
+  get 'static_pages/about_us'
+  get 'static_pages/our_services'
+  get 'static_pages/home'
   #get 'portofolios/index'
   #get 'portofolios/show'
   #get 'testimonies/index'

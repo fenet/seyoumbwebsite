@@ -1,3 +1,4 @@
+
 	<!-- Testimonials section start -->
 	<section class="testimonials-section spad">
 		<div class="testimonials-image-box"></div>
@@ -8,19 +9,10 @@
 					<div class="qut">“</div>
 					<div class="testimonials-slider" id="test-slider">
 						<div class="ts-item">
-							<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. Curabitur finibus dolor vel lectus pretium interdum a eget ante. </p>
-							<h4>Maria Westminster</h4>
-							<span>Client</span>
-						</div>
-						<div class="ts-item">
-							<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. Curabitur finibus dolor vel lectus pretium interdum a eget ante. </p>
-							<h4>Maria Westminster</h4>
-							<span>Client</span>
-						</div>
-						<div class="ts-item">
-							<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. Curabitur finibus dolor vel lectus pretium interdum a eget ante. </p>
-							<h4>Maria Westminster</h4>
-							<span>Client</span>
+							<% @testimonies.each do |v|%>		
+     							<h3><%= v.client_name%></h3>
+     							<h4><%= v.client_testimony %></h4>
+  							<%end %>
 						</div>
 					</div>
 					<div class="slide-num-holder test-slider" id="snh-2"></div>

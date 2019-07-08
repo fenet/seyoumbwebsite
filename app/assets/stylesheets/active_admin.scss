@@ -1,3 +1,6 @@
+//$am-theme-primary: #A5A7AA!default;
+@import 'activeadmin_addons/all';
+//@import 'activeadmin_addons/material';
 // SASS variable overrides must be declared before loading up Active Admin's styles.
 //
 // To view the variables that Active Admin provides, take a look at
@@ -10,6 +13,12 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+
+//$skinMainFirstColor: #c9470a!default;
+//$skinMainSecondColor: #0066CC!default;
+//$skinBorderWindowColor: #B8BABE!default;
+
+@import "wigu/active_admin_theme";
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:

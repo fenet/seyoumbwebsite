@@ -13,7 +13,7 @@
   <body>
 
 
-     <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(static_pages_contact_us_path)  %>  
+     <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(static_pages_contact_us_path) || current_page?(static_pages_our_services_path)  %>  
      
         <%= render '/layouts/header' %>
     
@@ -22,7 +22,7 @@
 
     <%= yield %>
 
-        <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(static_pages_contact_us_path)  %>  
+        <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(static_pages_contact_us_path) || current_page?(static_pages_our_services_path) %>  
      
              <%= render '/layouts/footer' %>
     

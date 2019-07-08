@@ -1,5 +1,5 @@
 <!-- Page header section start -->
-	<section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
+	<section class="page-header-section set-bg">
 		<div class="container">
 			<h1 class="header-title">Portfolio<span>.</span></h1>
 		</div>
@@ -12,12 +12,10 @@
 		<div class="container">
 			<!-- portfolio filter menu -->
 			<ul class="portfolio-filter">
-				<li class="filter" data-filter="*">All</li>
-				<li class="filter" data-filter=".photo">Photography</li>
-				<li class="filter" data-filter=".design">Design</li>
-				<li class="filter" data-filter=".iden">Identity</li>
-				<li class="filter" data-filter=".corp">Corporate</li>
-				<li class="filter" data-filter=".uxui">UI/UX</li>
+				<li class="filter" data-filter="*">Commercial Building</li>
+				<li class="filter" data-filter=".photo">Apartments</li>
+				<li class="filter" data-filter=".design">Mixed Use Building</li>
+				<li class="filter" data-filter=".iden">Home Designs</li>
 			</ul>
 		</div>
 		<!-- portfolio items -->
@@ -25,19 +23,19 @@
 			<div id="portfolio">
 				<div class="grid-sizer"></div>
 				<!-- portfolio item -->
-				<div class="grid-item set-bg grid-wide photo" data-setbg="img/portfolio/1.jpg"><a class="img-popup" href="img/portfolio/1.jpg"></a></div>
-				<!-- portfolio item -->
-				<div class="grid-item set-bg design corp" data-setbg="img/portfolio/2.jpg"><a class="img-popup" href="img/portfolio/2.jpg"></a></div>
-				<!-- portfolio item -->
-				<div class="grid-item set-bg iden photo uxui" data-setbg="img/portfolio/3.jpg"><a class="img-popup" href="img/portfolio/3.jpg"></a></div>
-				<!-- portfolio item -->
-				<div class="grid-item set-bg corp design" data-setbg="img/portfolio/4.jpg"><a class="img-popup" href="img/portfolio/4.jpg"></a></div>
-				<!-- portfolio item -->
-				<div class="grid-item set-bg uxui iden" data-setbg="img/portfolio/5.jpg"><a class="img-popup" href="img/portfolio/5.jpg"></a></div>
-				<!-- portfolio item -->
-				<div class="grid-item set-bg grid-long design corp" data-setbg="img/portfolio/6.jpg"><a class="img-popup" href="img/portfolio/6.jpg"></a></div>
+				<div class="grid-item set-bg grid-wide photo" >
+					<%= @portofolios.each do |v|%>
+    					<div>
+							 <%= image_tag(v.building_photo.url(:small_thumbnail), alt: "#{v.building_name}") if !v.building_photo.nil? %>
+    							<h4><%= v.building_name%></h4>
+   								 <h4><%= v.building_description%></h4>
+
+  						  </div>
+					<% end %>
+				</div>
 			</div>
 		</div>
+		<!-- pagination area -->
 		<div class="container">
 			<div class="pagination">
 				<a href="#">01</a>
@@ -45,5 +43,7 @@
 				<a href="">03</a>
 			</div>
 		</div>
+		<!-- pagination area end -->
 	</div>
 	<!-- Page section end -->
+
