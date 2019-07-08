@@ -1,2 +1,87 @@
-<h1>StaticPages#about_us</h1>
-<p>Find me in app/views/static_pages/about_us.html.erb</p>
+
+	<!-- Page header section start -->
+	<section class="page-header-section set-bg" data-setbg="img/header-bg.jpg">
+		<div class="container">
+			<h1 class="header-title">About us<span>.</span></h1>
+		</div>
+	</section>
+	<!-- Page header section end -->
+
+
+
+	<!-- Intro section start -->
+	<section class="intro-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 intro-text">
+					<h1>We are a creative Architecture<span style="color: white;">Studio</span></h1>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. </p>
+						</div>
+						<div class="col-md-6">
+							<p>Curabitur finibus dolor vel lectus pretium interdum a eget ante. Morbi rhoncus feugiat imperdiet. Curabitur non maximus leo. Nulla in ipsum sed magna egestas bibendum. Integer in sem sagittis, commodo mi sit amet, commodo nibh. Suspendisse potenti. Aliquam erat volutpat. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 pt-4">
+					<%=image_tag("2.jpg", alt: "About image 1") %>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end -->
+
+	<!-- Team section start -->
+	<section class="team-section spad">
+		<div class="container">
+			<div class="section-title mb100">
+				<h1 style="color: white;">The Team</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="team-member">
+						<img src="/assets/icon1.png" alt="">
+						<div class="member-info">
+							<h2>seyoum Beyene</h2>
+							<p>Senior enginner</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="team-member">
+						<img src="img/team/2.jpg" alt="">
+						<div class="member-info">
+							<h2>Lili James</h2>
+							<p>junior</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="team-member">
+						<img src="img/team/3.jpg" alt="">
+						<div class="member-info">
+							<h2>hello</h2>
+							<p>Senior Architect</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Team section end -->
+
+
+	<section class="promo-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 promo-text">
+					<h1>In need of a <span style="color: white;">Consultant</span> for your building or home?</h1>
+					<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus.</p>
+				</div>
+				<div class="col-lg-3 text-lg-right">
+					<%= link_to("Get in Touch", static_pages_about_us_path,  class: "site-btn sb-dark mt-4" )%>
+				</div>
+			</div>
+		</div>
+	</section>

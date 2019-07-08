@@ -10,17 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 2019_07_01_124431) do
->>>>>>> 34d061960f6b706a79c4b88bde10baa064b1c0c9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -70,5 +64,4 @@ ActiveRecord::Schema.define(version: 2019_07_01_124431) do
 
   add_foreign_key "portofolios", "admin_users"
   add_foreign_key "testimonies", "admin_users"
->>>>>>> 34d061960f6b706a79c4b88bde10baa064b1c0c9
 end
