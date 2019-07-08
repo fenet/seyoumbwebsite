@@ -8,8 +8,12 @@ ActiveAdmin.register Testimony do
     column "Client Photo" do |i|
       image_tag(i.client_photo.url(:small_thumbnail)) if i.client_photo.present?
     end
-    column "Client Name", sortable: true
-    column "Client Testimony"
+    column "Client Name" do |i|
+       i.client_name
+    end
+    column "Client Testimony" do |i|
+       i.client_testimony
+    end
 
     column "Created At", sortable: true do |c|
       c.created_at.strftime("%b %d, %Y")

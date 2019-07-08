@@ -20,7 +20,15 @@
 
 @import "wigu/active_admin_theme";
 
-// Overriding any non-variable SASS must be done after the fact.
-// For example, to change the default status-tag color:
-//
-//   .status_tag { background: #6090DB; }
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#new_active_admin_comment{
+  margin-left: 0px;
+}
+
+.sidebar_section td{
+	text-align: center;
+}
