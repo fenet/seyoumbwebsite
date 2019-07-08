@@ -1,11 +1,76 @@
-<%= @portofolios.each do |v|%>
+<!-- Page header section start -->
+	<section class="page-header-section set-bg">
+		<div class="container">
+			<h1 class="header-title">Portfolio<span>.</span></h1>
+		</div>
+	</section>
+	<!-- Page header section end -->
 
-    <div>
 
-    <%= image_tag(v.building_photo.url(:small_thumbnail), alt: "#{v.building_name}") if !v.building_photo.nil? %>
-    <h4><%= v.building_name%></h4>
-    <h4><%= v.building_description%></h4>
+	<!-- Page section start -->
+	<div class="page-section spad">
+		<div class="container">
+			<!-- portfolio filter menu -->
+			<ul class="portfolio-filter">
+				<li class="filter" data-filter="*">Commercial Building</li>
+				<li class="filter" data-filter=".photo">Apartments</li>
+				<li class="filter" data-filter=".design">Mixed Use Building</li>
+				<li class="filter" data-filter=".iden">Home Designs</li>
+			</ul>
+		</div>
+		<!-- portfolio items -->
+		<div class="portfolio-warp spad">
+			<div id="portfolio">
+				<div class="grid-sizer"></div>
+				<!-- portfolio item -->
+				<div class="grid-item set-bg grid-wide photo" >
+					<%= @portofolios.each do |v|%>
+    					<div>
+							 <%= image_tag(v.building_photo.url(:small_thumbnail), alt: "#{v.building_name}") if !v.building_photo.nil? %>
+    							<h4><%= v.building_name%></h4>
+   								 <h4><%= v.building_description%></h4>
 
+  						  </div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<!-- pagination area -->
+		<div class="container">
+			<div class="pagination">
+				<a href="#">01</a>
+				<a href="" class="active">02</a>
+				<a href="">03</a>
+			</div>
+		</div>
+		<!-- pagination area end -->
+	</div>
+	<!-- Page section end -->
+<section class="blog-area blog-page section-padding">
+     <div class="row">
+        <% @portofolios.each do |f|%>
+          <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+              <div class="blog-image col-xs-offset-2" style="width: 200px;height: 200px; ">
+					<span style="width: 200px; height: 200px;"> 
+						<%= image_tag f.building_photo if f.building_photo%></span>
+					</div>
+              </div><br><br> 
+              
+            </div>
+            <hr>
+		        <div class="well" style="width: auto;height: auto;">
+		            	<div class="row">
+		            	<strong>Bilding_name:</strong><hr>
+		                <p  style="font-family: Serif;"><%=f.Bilding_name%></p>
+		            </div>
+		            <div class="row">
+		            	<strong>Building_description:</strong><hr>
+		                <p  style="font-family: Serif;"><%=f.building_description%></p>
+		            </div>
+                </div>
+       		 </div>
+   		 <%end%>
     </div>
-
-<% end %>
+</section>

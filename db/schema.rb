@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_064709) do
     t.string "building_description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_portofolios_on_admin_user_id"
   end
 
   create_table "testimonies", force: :cascade do |t|
@@ -64,6 +66,10 @@ ActiveRecord::Schema.define(version: 2019_07_08_064709) do
     t.string "client_phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_testimonies_on_admin_user_id"
   end
 
+  add_foreign_key "portofolios", "admin_users"
+  add_foreign_key "testimonies", "admin_users"
 end

@@ -1,7 +1,23 @@
-<% @testimonies.each do |v|%>
 
-    <div>
-      <h4><%= v.client_name%></h4>
-    </div>  
-
-    <%end %>
+	<!-- Testimonials section start -->
+	<section class="testimonials-section spad">
+		<div class="testimonials-image-box"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
+					<h1>Clients <span>testimonials</span></h1>
+					<div class="qut">“</div>
+					<div class="testimonials-slider" id="test-slider">
+						<div class="ts-item">
+							<% @testimonies.each do |v|%>		
+     							<h3><%= v.client_name%></h3>
+     							<h4><%= v.client_testimony %></h4>
+  							<%end %>
+						</div>
+					</div>
+					<div class="slide-num-holder test-slider" id="snh-2"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Testimonials section end -->

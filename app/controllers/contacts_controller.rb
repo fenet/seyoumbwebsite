@@ -17,5 +17,9 @@ class ContactsController < ApplicationController
     params.require(:contact)
           .permit(:user_name, :email, :message)
 
+<<<<<<< HEAD:app/controllers/contacts_controller.rb
 end
+=======
+  end
+>>>>>>> 74b66ed9a430070f96230dd4b0b4b9470dc44727:app/controllers/contacts_controller.rb
 end
