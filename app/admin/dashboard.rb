@@ -7,7 +7,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Portofolio posts" do
           table_for Portofolio.order("id desc").limit(10) do
-            column("building Name") { |portofolio| link_to(truncate(portofolio.building_name, :length => 20), admin_portofolio_path(portofolio)) }
+            column("Building Name") { |portofolio| link_to(truncate(portofolio.building_name, :length => 20), admin_portofolio_path(portofolio)) }
             column("Created At" )   { |portofolio| portofolio.created_at.strftime("%b %d, %Y")}
           end
         end
@@ -23,5 +23,18 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
     end
+
+    columns do
+      column do
+        panel "Recent Contact Messages" do
+          table_for Contact.order("id desc").limit(10) do
+            column("User Name") { |contact| link_to(truncate(contact.user_name, :length => 20), admin_contact_path(contact)) }
+            column("Message") { |contact| link_to(truncate(contact.message, :length => 20), admin_contact_path(contact)) }
+            column("Created At" )   { |contact| contact.created_at.strftime("%b %d, %Y")}
+          end
+        end
+      end
+
   end
+end
 end

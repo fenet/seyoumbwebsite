@@ -1,15 +1,12 @@
 class StaticPagesController < ApplicationController
-  def contact_us
+  def home
+    @portofolios = Portofolio.order("created_at DESC").limit(4)
+    @testimonies = Testimony.order("created_at DESC").limit(4)
   end
 
   def about_us
   end
 
   def our_services
-  end
-
-  def home
-    @testimony = Testimony.order("created_at DESC").limit(3)
-    @portofolio = Portofolio.order("created_at DESC").limit(3)
   end
 end
