@@ -46,4 +46,31 @@
 		<!-- pagination area end -->
 	</div>
 	<!-- Page section end -->
-
+<section class="blog-area blog-page section-padding">
+     <div class="row">
+        <% @portofolios.each do |f|%>
+          <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+              <div class="blog-image col-xs-offset-2" style="width: 200px;height: 200px; ">
+					<span style="width: 200px; height: 200px;"> 
+						<%= image_tag f.building_photo if f.building_photo%></span>
+					</div>
+              </div><br><br> 
+              
+            </div>
+            <hr>
+		        <div class="well" style="width: auto;height: auto;">
+		            	<div class="row">
+		            	<strong>Bilding_name:</strong><hr>
+		                <p  style="font-family: Serif;"><%=f.Bilding_name%></p>
+		            </div>
+		            <div class="row">
+		            	<strong>Building_description:</strong><hr>
+		                <p  style="font-family: Serif;"><%=f.building_description%></p>
+		            </div>
+                </div>
+       		 </div>
+   		 <%end%>
+    </div>
+</section>

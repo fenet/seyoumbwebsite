@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'contact/new'
+ 
 
   get 'static_pages/about_us'
   
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :testimonies, only: [:index]
   resources :portofolios,  only: [:index, :show]
-
+  resources :contacts, only: [:new]
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
