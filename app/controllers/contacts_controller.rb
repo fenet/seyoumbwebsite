@@ -1,5 +1,4 @@
-class ContactController < ApplicationController
-
+class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
@@ -14,10 +13,9 @@ class ContactController < ApplicationController
     @contact = Contact.new
   end
 
-  def question_params
+  def contact_params
     params.require(:contact)
           .permit(:user_name, :email, :message)
 
-  end
-
+end
 end

@@ -1,6 +1,8 @@
 ActiveAdmin.register Contact do
  permit_params :user_name, :email, :message
+ actions  :index, :destroy, :show, :delete
 
+ 
  index do
 
    column "User Name", sortable: true
@@ -13,7 +15,7 @@ ActiveAdmin.register Contact do
    actions
  end
 
-  filter :building_name
+  filter :user_name
 
   show do
     panel "Contact Comments" do
