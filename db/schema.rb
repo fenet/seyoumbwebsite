@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_07_01_124431) do
+=======
+ActiveRecord::Schema.define(version: 2019_07_08_064709) do
+>>>>>>> 1c57a132021dee349a15546d0a34e3cf655a3d0e
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +43,14 @@ ActiveRecord::Schema.define(version: 2019_07_01_124431) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "user_name"
+    t.string "email", null: false
+    t.string "message", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "portofolios", force: :cascade do |t|
