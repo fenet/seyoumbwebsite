@@ -30,23 +30,17 @@
 		<div class="hero-slider">
 			<div class="hero-slide-item">
 				<div class="slide-inner">
-					<div class="slide-content">
-					<h2>Seyoum <br>Beyene <br>Construction Consulting</h2>
-					<a href="#" class="site-btn sb-light">See Project</a>
+					<div class="content" style="text-align: center;">
+					<h2 class="sp-title" style="color: white; font-family: CenturyGothic">
+					Seyoum Beyene <br> Construction Management & Consulting <br>PLC</h2>
+					<%= link_to("About Us", static_pages_about_us_path,  class: "site-btn sb-light" )%>
+					<%= link_to("See Projects", portofolios_path,  class: "site-btn sb-light" )%>
 					</div>	
 				</div>
 			</div>	
-			<!--<div class="hero-slide-item " data-setbg="assets/home-banner-2.jpg">
-				<div class="slide-inner">
-					<div class="slide-content">
-					<h2>Minimalistic <br>Architecture <br> and more</h2>
-					<a href="#" class="site-btn sb-light">See Project</a>
-					</div>	
-				</div> 
-			</div>	-->
 		</div>
 		<div class="slide-num-holder" id="snh-1"></div>
-		<div class="hero-right-text">Construction consulting</div>
+		<div class="hero-right-text">Seyoum Beyene</div>
 	</section>
 	<!-- Hero section end -->
 
@@ -87,7 +81,6 @@
 						</div>
 						<h3>Plans and Projects</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -99,7 +92,6 @@
 						</div>
 						<h3>Conceptual Architecture</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -111,7 +103,6 @@
 						</div>
 						<h3>Apartment Buildings</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -123,7 +114,6 @@
 						</div>
 						<h3>Skyscrapers Buildings</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -135,7 +125,6 @@
 						</div>
 						<h3>Documentation</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -147,11 +136,14 @@
 						</div>
 						<h3>Restauration Projects</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed dui eget lorem tincidunt.</p>
-						<a href="#" class="readmore">READ MORE</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
+		<center>
+		<%= link_to("Read More About Us", static_pages_about_us_path,  class: "site-btn sb-dark" )%>
+	</center>
 	</section>
 	<!-- Service section end -->
 
@@ -221,9 +213,9 @@
 	<div class="projects-section pb50">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-6">
 					<div class="section-title">
-						<h1 style="color: white;">Projects</h1>
+						<h1 style="color: white;">Projects Made</h1>
 					</div>
 				</div>
 				<!--<div class="col-lg-9">
@@ -245,8 +237,7 @@
 				</div>
 			</div>
 			<div class="single-project set-bg build" style="background-image: url(assets/projects/2.jpg);background-repeat: no-repeat;">
-				<div class="project-content">
-					<h2>Office <br> Building</h2>
+ 					<h2>Office <br> Building</h2>
 					<p>Jan 19, 2018</p>
 					<a href="#" class="seemore">See Project </a>
 				</div>
@@ -263,23 +254,21 @@
      <div class="row">
         <% @portofolios.each do |f|%>
           <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-              <div class="blog-image col-xs-offset-2" style="width: 200px;height: 200px; ">
-					<span style="width: 200px; height: 200px;"> 
-						<%= image_tag f.building_photo if f.building_photo%></span>
-					</div>
-              </div><br><br> 
-              
-            </div>
             <hr>
 		        <div class="well" style="width: auto;height: auto;">
-		            	<div class="row">
-		            	<strong>Bilding_name:</strong><hr>
-		                <p  style="font-family: Serif;"><%=f.Bilding_name%></p>
+		        	<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="blog-image col-xs-offset-1" style="width: 200px;height: 200px; ">
+					<span style="width: 200px; height: 200px;"> 
+						 <%= image_tag f.building_photo.url, class: "thumbnail" %>
+						</span>
+					</div>
+            </div>
+		            	<div class="row building-tag">
+		            	<strong class="building-tag">Bilding name:</strong>
+		                <p  style="font-family: Serif;"><%=f.building_name%></p>
 		            </div>
-		            <div class="row">
-		            	<strong>Building_description:</strong><hr>
+		            <div class="row building-tag">
+		            	<strong class="building-tag">Building description:</strong>
 		                <p  style="font-family: Serif;"><%=f.building_description%></p>
 		            </div>
                 </div>
@@ -348,17 +337,17 @@
               <i class="fa fa-certificate fa-4x" style="color: #295498" ></i>
                <h4>What client’s say about our Services</h4>
             </div>
-           <div id="twitter-carousel-service" class="carousel slide" data-ride="carousel">
+           <div id="twitter-carousel-service " class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
             <% @testimonies.each do |index| %>
                
-               <div class='item <%= "active" if index == @services.first %>'> 
+               <div class='item <%= "active" if index == @testimonies.first %> twitter-icon text-center' style="text-transform: uppercase; font-weight: bold;"> 
                  <%= index.client_name %>
                  
                <div>
-                 <%= index.client_testimony %>
+                 <br><%= index.client_testimony %>
                </div>
-
+<br>
                </div>
 
             <% end %>
@@ -373,3 +362,8 @@
 
 	<!-- Clients section end -->
 
+<style type="text/css">
+	.building-tag{
+		text-align: center;
+	}
+</style>

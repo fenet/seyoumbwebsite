@@ -2,14 +2,10 @@ Rails.application.routes.draw do
 
 
   get 'static_pages/about_us'
-<<<<<<< HEAD
   
   get 'static_pages/our_services'
 
   get 'static_pages/faq'
-
-=======
->>>>>>> 6c171a0db294381a994e13220401519bee730b6f
 
   #get 'static_pages/our_services'
 
