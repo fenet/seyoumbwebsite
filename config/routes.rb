@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   get 'static_pages/our_services'
 
+  get 'static_pages/faq'
+
 
 
   #get 'portofolios/index'
