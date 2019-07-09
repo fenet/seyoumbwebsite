@@ -4,7 +4,7 @@ class BuildingPhotoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  #storage :file
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -12,8 +12,9 @@ class BuildingPhotoUploader < CarrierWave::Uploader::Base
   #def store_dir
   #  "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   #end
+  
   include CarrierWave::MiniMagick
-  include Cloudinary::CarrierWave
+ # include Cloudinary::CarrierWave
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
@@ -22,6 +23,9 @@ class BuildingPhotoUploader < CarrierWave::Uploader::Base
   #
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
+   def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
@@ -29,7 +33,7 @@ class BuildingPhotoUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  process :convert => 'png'
+ #process :convert => 'png'
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process resize_to_fit: [50, 50]

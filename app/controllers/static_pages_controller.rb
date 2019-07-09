@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @portofolios = Portofolio.order("created_at DESC").limit(4)
+    @portofolios = Portofolio.order("created_at DESC").limit(3)
     @testimonies = Testimony.order("created_at DESC").limit(4)
   end
 

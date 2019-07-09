@@ -1,0 +1,144 @@
+  <style>
+
+h2 {
+    font-size: 36px; 
+    color: #3c4a62;
+    margin: 0 0 15px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.service-content h2::after {
+    border-bottom: 1px dashed rgb(243, 156, 18);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.area-title h2::before,
+.area-title h2::after {
+   
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.area-title h2::after {
+    background: #295498 none repeat scroll 0 0;
+    height: 4px;
+    width: 200px;
+}
+
+
+.area-title h2 {
+    display: inline-block;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+button.accordion {
+    background-color: #295498;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\02795';
+    font-size: 16px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;  
+}
+</style>
+ <!-- Page header section start -->
+  <section class="page-header-section set-bg">
+    <div class="container">
+     <!-- <h1 class="header-title">About us<span>.</span></h1>-->
+     <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+               <div class="area-title text-center wow fadeIn">
+          <h2 style="color: white;" !important>Frequently Asked Questions</h2>
+          <p style="color: white;" !important>Things you need to know...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- Page header section end -->
+ <section id="faq_head">
+    <div class="container">
+      <button class="accordion">Do we charge job seekers to use our service? <i class="fa fa-question"></i></button>
+            <div class="panel">
+              <p>Absolutely NOT – we just want to assist you, getting the job you want and provide the Clients who use our services to employ well qualified candidates like you.
+              </p>
+            </div>
+<button class="accordion">Do we charge job seekers to use our service? <i class="fa fa-question"></i></button>
+            <div class="panel">
+              <p>Absolutely NOT – we just want to assist you, getting the job you want and provide the Clients who use our services to employ well qualified candidates like you.
+              </p>
+            </div>
+            <button class="accordion">Do we charge job seekers to use our service? <i class="fa fa-question"></i></button>
+            <div class="panel">
+              <p>Absolutely NOT – we just want to assist you, getting the job you want and provide the Clients who use our services to employ well qualified candidates like you.
+              </p>
+            </div>
+
+
+
+</section>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+</div>

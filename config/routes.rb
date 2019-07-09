@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
 >>>>>>> 6c171a0db294381a994e13220401519bee730b6f
   get 'static_pages/about_us'
-
+  
   get 'static_pages/our_services'
+
+  get 'static_pages/faq'
+
+  #get 'static_pages/our_services'
 
 
   resources :testimonies, only: [:index]

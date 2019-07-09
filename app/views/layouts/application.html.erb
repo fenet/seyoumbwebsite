@@ -13,16 +13,16 @@
   <body>
 
 
-     <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(new_contact_path) || current_page?(static_pages_our_services_path)  %>  
+     <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(new_contact_path) || current_page?(static_pages_our_services_path) || current_page?(static_pages_faq_path) %>  
      
         <%= render '/layouts/header' %>
-    
+
    <%end%>
 
 
     <%= yield %>
 
-        <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(new_contact_path) || current_page?(static_pages_our_services_path) %>  
+        <% if current_page?(root_path) ||  current_page?(static_pages_about_us_path) || current_page?(portofolios_path) || current_page?(new_contact_path) || current_page?(static_pages_our_services_path) || current_page?(static_pages_faq_path) %>  
      
              <%= render '/layouts/footer' %>
     
