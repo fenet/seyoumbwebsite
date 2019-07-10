@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c171a0db294381a994e13220401519bee730b6f
   get 'static_pages/about_us'
   
   get 'static_pages/our_services'
@@ -18,11 +14,10 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:create, :new]
 
-<<<<<<< HEAD
+
   #resources :contacts, only: [:new]
 
-=======
->>>>>>> 6c171a0db294381a994e13220401519bee730b6f
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

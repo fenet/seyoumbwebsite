@@ -9,10 +9,6 @@ ActiveAdmin.register Portofolio do
    column "Building Photo" do |i|
      image_tag(i.building_photo.url(:small_thumbnail)) if i.building_photo.present?
    end
-<<<<<<< HEAD
-
-=======
->>>>>>> 6c171a0db294381a994e13220401519bee730b6f
    column "Building Name" do |i|
       i.building_name
    end
