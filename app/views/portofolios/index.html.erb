@@ -27,14 +27,15 @@
      <div class="row">
         <% @portofolios.each do |f|%>
           <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
-            <hr>
-		        <div class="well" >
-		        	<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="blog-image col-xs-offset-1" style="width: 200px;height: 200px; ">
-					<span style="width: 200px; height: 200px;"> 
-						 <%= image_tag(f.building_photo.url(:small_thumbnail), alt: "#{f.building_name}") if !f.building_photo.nil? %>
-						</span>
+
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <div class="member-image">
+              <div class="blog-image col-xs-offset-2" style="width: 200px;height: 200px; ">
+					<span style="width: 200px; height: 200px;">
+						<%= image_tag f.building_photo if f.building_photo%></span>
 					</div>
+              </div><br><br>
+
             </div>
 		            	<div class="row building-tag">
 		            	<strong class="building-tag">Bilding name:</strong>
