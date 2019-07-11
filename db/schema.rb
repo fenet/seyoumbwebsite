@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_064709) do
+ActiveRecord::Schema.define(version: 2019_07_11_072514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,13 +50,14 @@ ActiveRecord::Schema.define(version: 2019_07_08_064709) do
   end
 
   create_table "portofolios", force: :cascade do |t|
-    t.string "building_name", null: false
-    t.string "building_photo", null: false
-    t.string "building_description", null: false
+    t.string "project_name", null: false
+    t.string "project_photo", null: false
+    t.string "project_description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "admin_user_id"
-    t.index ["admin_user_id"], name: "index_portofolios_on_admin_user_id"
+    t.string "location"
+    t.text "client"
+    t.boolean "work_at_hand"
   end
 
   create_table "testimonies", force: :cascade do |t|
@@ -66,10 +67,6 @@ ActiveRecord::Schema.define(version: 2019_07_08_064709) do
     t.string "client_phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "admin_user_id"
-    t.index ["admin_user_id"], name: "index_testimonies_on_admin_user_id"
   end
 
-  add_foreign_key "portofolios", "admin_users"
-  add_foreign_key "testimonies", "admin_users"
 end

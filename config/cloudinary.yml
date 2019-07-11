@@ -1,3 +1,4 @@
+---
 development:
   cloud_name: <%= Rails.application.credentials.production[:cloud_name] %>
   api_key: <%= Rails.application.credentials.production[:api_key] %>

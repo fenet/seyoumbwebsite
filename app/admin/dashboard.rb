@@ -7,7 +7,8 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent Portofolio posts" do
           table_for Portofolio.order("id desc").limit(10) do
-            column("Building Name") { |portofolio| link_to(truncate(portofolio.building_name, :length => 20), admin_portofolio_path(portofolio)) }
+            column("Project Name") { |portofolio| link_to(truncate(portofolio.project_name, :length => 20), admin_portofolio_path(portofolio)) }
+            column("Location" )   { |portofolio| portofolio.location}
             column("Created At" )   { |portofolio| portofolio.created_at.strftime("%b %d, %Y")}
           end
         end
