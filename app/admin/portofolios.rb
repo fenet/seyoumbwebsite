@@ -9,9 +9,14 @@ ActiveAdmin.register Portofolio do
    column "Project Photo" do |i|
      image_tag(i.project_photo.url(:small_thumbnail)) if i.project_photo.present?
    end
+<<<<<<< HEAD
 
    column "Project Name" do |i|
       i.project_name
+=======
+   column "Building Name" do |i|
+      i.building_name
+>>>>>>> 7b5396916e1869e9a22940437225a68e76745dbd
    end
 
    column "Location" do |i|

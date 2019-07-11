@@ -5,7 +5,10 @@
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-
+<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
 <style type="text/css">
 	.mission-area{
 		text-align: center;
@@ -128,7 +131,7 @@ With attentively controlled Quality Management Systems and an uncompromising wor
 						<h1>In need of a <span style="color: white;">Consultant</span> for your building or home?</h1>
 					</div>
 					<div class="col-lg-3 text-lg-right">
-					<%= link_to("Get in Touch", static_pages_about_us_path,  class: "site-btn sb-light mt-4" )%>
+					<%= link_to("Get in Touch", new_contact_path,  class: "site-btn sb-light mt-4" )%>
 				</div>
 				</div>
 			</div>
