@@ -1,7 +1,9 @@
-DEV_DATABASE: 'seyoumb'
-DB_USERNAME: 'fena'
-DB_PASSWORD: 'fenet 1986&'
+DEV_DATABASE: 'seyoumb_dev'
+DB_USERNAME: 'seyoumb'
+DB_PASSWORD: '12345678'
 DB_HOST: 'localhost'
 DB_PORT: '5432'
 
-TEST_DATABASE: 'seyoumb'
+TEST_DATABASE: 'seyoumb_test'
+
+

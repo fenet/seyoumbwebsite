@@ -27,30 +27,29 @@
      <div class="row">
         <% @portofolios.each do |f|%>
           <div class="col-sm-3 col-sm-offset-1 col-xs-12 ">
-<<<<<<< HEAD
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-              <div class="blog-image col-xs-offset-2" style="width: 200px;height: 200px; ">
-					<span style="width: 200px; height: 200px;">
-						<%= image_tag (f.building_photo if f.building_photo)%></span>
-=======
             <hr>
 		        <div class="well " >
 		        	<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="blog-image col-xs-offset-1" style="width: 200px;height: 200px; ">
 					<span style="width: 200px; height: 200px;" class="single-project set-bg rest"> 
-						 <%= image_tag(f.building_photo.url(:small_thumbnail), alt: "#{f.building_name}") if !f.building_photo.nil? %>
+						 <%= image_tag(f.project_photo.url(:small_thumbnail), alt: "#{f.project_photo}") if !f.project_photo.nil? %>
+
 						</span>
->>>>>>> 7b5396916e1869e9a22940437225a68e76745dbd
 					</div>
             </div>
 		            	<div class="row building-tag project-content">
-		            	<strong class="building-tag">Bilding name:</strong>
-		                <p  style="font-family: Serif;"><%=f.building_name%></p>
+		            	<strong class="building-tag">Project name:</strong>
+		                <p  style="font-family: Serif;"><%=f.project_name%></p>
+		                <strong class="building-tag">Location:</strong>
+		                <p  style="font-family: Serif;"><%=f.location%></p>
+		                <strong class="building-tag">Client:</strong>
+		                <p  style="font-family: Serif;"><%=f.client%></p>
 		            </div>
 		            <div class="row building-tag project-content">
-		            	<strong class="building-tag">Building description:</strong>
-		                <p  style="font-family: Serif;"><%=f.building_description%></p>
+		            	<strong class="building-tag">Work at Hand:</strong>
+		                <p  style="font-family: Serif;"><%=f.work_at_hand%></p>
+		                <strong class="building-tag">Project Description:</strong>
+		                <p  style="font-family: Serif;"><%=f.project_description%></p>
 		            </div>
                 </div>
        		 </div>
