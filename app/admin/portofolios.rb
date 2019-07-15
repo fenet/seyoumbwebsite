@@ -14,17 +14,7 @@ ActiveAdmin.register Portofolio do
    column "Project Name" do |i|
       i.project_name
 
-<<<<<<< HEAD
   end
-
-   column "Building Name" do |i|
-      i.building_name
-=======
-  # column "Building Name" do |i|
-   #   i.building_name
->>>>>>> aafe6e9d527f73ff3dfa45a5cc088d73c93eddcd
-
-   end
 
    column "Location" do |i|
       i.project_description
@@ -101,5 +91,3 @@ ActiveAdmin.register Portofolio do
   end
 
 end
-
-
