@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 7b5396916e1869e9a22940437225a68e76745dbd
   get 'static_pages/about_us'
 
   get 'static_pages/our_services'
@@ -18,14 +15,8 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:create, :new]
 
-<<<<<<< HEAD
-
-=======
-
-  #resources :contacts, only: [:new]
 
 
->>>>>>> 7b5396916e1869e9a22940437225a68e76745dbd
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
