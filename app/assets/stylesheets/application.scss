@@ -159,7 +159,7 @@ ol {
 .set-bg {
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: url("../assets/header-bg-2.jpg");
+	background-image: url(/assets/header-bg-2.jpg);
 	
 }
 
@@ -809,7 +809,6 @@ ol {
 	width: 50%;
 	height: 100%;
 	left: 0;
-	background-image: url("../assets/cta-img.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -2131,9 +2130,6 @@ ol {
 	.projects-slider {
 		padding: 0 15px;
 	}
-}
-#twitter {
-  background-image: url(/assets/twitter-bg.jpg);
 }
 
 #twitter > div {

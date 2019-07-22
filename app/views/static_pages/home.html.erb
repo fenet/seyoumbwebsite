@@ -74,9 +74,9 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="service-box">
-						<div class="sb-icon"><img src="assets/intro.png" alt="">
+						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/1.png" alt="">
+								<%= image_tag("/assets/icon/dark/1.png", alt: "Supervision") %>
 							</div>
 						</div>
 						<h3>Supervision</h3>
@@ -87,7 +87,7 @@
 					<div class="service-box">
 						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/2.png" alt="">
+								<%= image_tag("/assets/icon/dark/2.png", alt: "Contact Administration") %>
 							</div>
 						</div>
 						<h3>Contact Administration</h3>
@@ -98,7 +98,7 @@
 					<div class="service-box">
 						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/3.png" alt="">
+								<%= image_tag("/assets/icon/dark/3.png", alt: "Contact review") %>
 							</div>
 						</div>
 						<h3>Contract review</h3>
@@ -109,7 +109,7 @@
 					<div class="service-box">
 						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/4.png" alt="">
+								<%= image_tag("/assets/icon/dark/4.png", alt: "Tendering") %>
 							</div>
 						</div>
 						<h3>Tendering</h3>
@@ -120,7 +120,7 @@
 					<div class="service-box">
 						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/5.png" alt="">
+								<%= image_tag("/assets/icon/dark/5.png", alt: "Quality surveying") %>
 							</div>
 						</div>
 						<h3>Quality surveying</h3>
@@ -131,7 +131,7 @@
 					<div class="service-box">
 						<div class="sb-icon">
 							<div class="sb-img-icon">
-								<img src="assets/icon/dark/6.png" alt="">
+								<%= image_tag("/assets/icon/dark/6.png", alt: "Design") %>
 							</div>
 						</div>
 						<h3>Design</h3>
@@ -151,21 +151,21 @@
 
 	<!-- CTA section start -->
 	<section class="cta-section pt100 pb50">
-		<div class="cta-image-box"></div>
+		<div class="cta-image-box" style=" background-image: url(/assets/cta-img.jpg); "></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
+				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content" >
 					<h2 class="sp-title">Dare to dream of a modern <span>home</span></h2>
 					<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. Curabitur finibus dolor vel lectus pretium interdum a eget ante. </p>
 					<div class="cta-icons">
 						<div class="cta-img-icon">
-							<img src="assets/icon/light/1.png" alt="">
+							<%= image_tag("/assets/icon/light/1.png", alt: "img1") %>
 						</div>
 						<div class="cta-img-icon">
-							<img src="assets/icon/light/2.png" alt="">
+							<%= image_tag("/assets/icon/light/2.png", alt: "img2") %>
 						</div>
 						<div class="cta-img-icon">
-							<img src="assets/icon/color/3.png" alt="">
+							<%= image_tag("/assets/icon/light/3.png", alt: "img3") %>
 						</div>
 					</div>
 				</div>
@@ -337,12 +337,12 @@
 
 <hr>
 	<!-- Clients section start -->
-	<section id="twitter" class="parallax">
+	<section id="twitter" class="parallax" style=" background-image: url(/assets/twitter-bg.jpg);">
     <div>
 
       <div class="container">
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
+          <div class="col-sm-8 col-sm-offset-2" >
             <div class="twitter-icon text-center">
               <i class="fa fa-certificate fa-4x" style="color: #295498" ></i>
                <h4>What client’s say about our Services</h4>
