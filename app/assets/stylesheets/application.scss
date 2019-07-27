@@ -17,12 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "jquery-ui";
-@import "magnific-popup"; 
+@import "magnific-popup";
 /* =================================
 ------------------------------------
   Arcade - Architecture
   Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 
@@ -160,7 +160,7 @@ ol {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url(/assets/header-bg-2.jpg);
-	
+
 }
 
 /*------------------------
@@ -505,8 +505,8 @@ ol {
 	text-transform: uppercase;
 	margin-right: 30px;
 	font-size: 14px;
-	color: #fff;
-	font-weight: 500;
+	/*color: #fff;*/
+	font-weight: 900;
 	position: relative;
 }
 
@@ -598,7 +598,7 @@ ol {
 	display: table-cell;
 	vertical-align: middle;
 	position: relative;
-	
+
 }
 
 .hero-slider .owl-nav {
@@ -2153,7 +2153,7 @@ ol {
   height: 64px;
   width: 64px;
   line-height: 65px;
-  border-radius: 50%; 
+  border-radius: 50%;
   position: relative;
 }
 
@@ -2181,7 +2181,7 @@ ol {
   color: #fff;
 }
 
-.twitter-left-control, 
+.twitter-left-control,
 .twitter-right-control {
   position: absolute;
   top: 50%;
@@ -2198,7 +2198,7 @@ ol {
 
 .twitter-left-control {
   left: 80px;
-} 
+}
 
 .twitter-right-control {
   right: 80px
