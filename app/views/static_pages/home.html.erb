@@ -27,7 +27,7 @@
 			</div>
 		</div>
 		<!-- hero slider area -->
-		<div class="hero-slider" style="background-image: url(assets/home-banner-1.jpg);">
+		<div class="hero-slider" style="background-image: url(assets/cta-img.jpg);">
 			<div class="hero-slide-item">
 				<div class="slide-inner">
 					<div class="content" style="text-align: center;">
@@ -151,7 +151,7 @@
 
 	<!-- CTA section start -->
 	<section class="cta-section pt100 pb50">
-		<div class="cta-image-box" style=" background-image: url(/assets/cta-img.jpg); "></div>
+		<div class="cta-image-box" style=" background-image: url(/assets/home-banner-2.jpg); "></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content" >
@@ -273,7 +273,7 @@
 		            </div>
 		            <div class="row building-tag project-content">
 		            	<strong class="building-tag">Work at Hand:</strong>
-		                <p  style="font-family: Serif;"><%=f.work_at_hand%></p>
+		                <p  style="font-family: Serif;"><%=f.work_at_hand ? "yes" : "No"%></p>
 		                <strong class="building-tag">Project Description:</strong>
 		                <p  style="font-family: Serif;"><%=f.project_description%></p>
 		            </div>

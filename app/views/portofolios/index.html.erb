@@ -31,7 +31,7 @@
 		        <div class="well " >
 		        	<div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="blog-image col-xs-offset-1" style="width: 200px;height: 200px; ">
-					<span style="width: 200px; height: 200px;" class="single-project set-bg rest"> 
+					<span style="width: 200px; height: 200px;" class="single-project set-bg rest">
 						 <%= image_tag(f.project_photo.url(:small_thumbnail), alt: "#{f.project_photo}") if !f.project_photo.nil? %>
 
 						</span>
@@ -47,7 +47,7 @@
 		            </div>
 		            <div class="row building-tag project-content">
 		            	<strong class="building-tag">Work at Hand:</strong>
-		                <p  style="font-family: Serif;"><%=f.work_at_hand%></p>
+		                <p  style="font-family: Serif;"><%=f.work_at_hand ? "yes" : "No"%></p>
 		                <strong class="building-tag">Project Description:</strong>
 		                <p  style="font-family: Serif;"><%=f.project_description%></p>
 		            </div>
