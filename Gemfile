@@ -44,7 +44,7 @@ gem 'activeadmin_addons', '~> 1.7', '>= 1.7.1'
 gem 'active_admin_theme', '~> 1.1'
 
 
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 gem 'cloudinary', '~> 1.11', '>= 1.11.1'
 # Reduces boot times through caching; required in config/boot.rb
